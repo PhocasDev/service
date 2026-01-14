@@ -4,19 +4,19 @@ import mongoose from "mongoose";
 const useSchema = new mongoose.Schema({
     names:{
         type:String,
-        required:[true,"Please provide name"]
+        required:[true,"Please provide name"],
     },
     email:{
-        type:string,
+        type:String,
         required:[true,`Please provide email`],
         unique:true
     },
     password:{
-        type:string,
+        type:String,
         required:[true,`Please enter your password`],
     },
     role:{
-        type:string,
+        type:String,
         enum:[`client`,`provide`,`admin`],
         default:"client"
     },
