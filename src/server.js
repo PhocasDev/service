@@ -4,7 +4,6 @@ import mongoose from "mongoose"
 import router from "./routes/userRouter.js"
 import bodyParser from "body-parser";
 
-
 dotenv.config()
 const app = express()
 
@@ -16,7 +15,6 @@ const db = process.env.DATABASE
  app.listen(port,()=>{
     console.log(`Server running on ${port}`)
  })
-
 
 mongoose.connect(db).then(()=>{console.log("Database connected sucssisfully")})
 .catch((error)=>{console.log(`Error is ${error}`)})
