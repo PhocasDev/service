@@ -3,11 +3,11 @@ import Controller from "../controller/userController.js"
 import { EmailExist } from "../midlleware/validation.js"
 import { verifyAccess } from "../midlleware/virifyAccess.js"
 const router = express.Router()
-router.post("/user",EmailExist,Controller.signUp)
-router.post("/user/login",Controller.login)
-router.get("/users",verifyAccess("user"),Controller.getAlluser)
-router.get("/user",Controller.getId)
-router.get("/user/:id",Controller.getoneUse)
-router.patch("/user/:id",Controller.updateUser)
+router.post("/",EmailExist,Controller.signUp)
+router.post("/login",Controller.login)
+router.get("/users",verifyAccess("client"),Controller.getAlluser)
+router.get("/",Controller.getId)
+router.get("/",Controller.getoneUse)
+router.patch("/",Controller.updateUser)
 
 export default router
