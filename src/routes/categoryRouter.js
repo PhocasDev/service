@@ -3,5 +3,8 @@ import categoryController from "../controller/categoryController.js"
 
 const router = express.Router()
 router.post("/create",categoryController.createCategory)
-router.get("/",categoryController.getAllCategory)
+router.get("/getAllCategory",categoryController.getAllCategory)
+router.get("/findOneCategory/:id",categoryController.findOnecategory)
+router.delete("/deleteOnecategory/:id",categoryController.deleteOnecategory)
+router.put("/UpdateAllcategory/:id",categoryController.UpdateAllcategory)
 export default router

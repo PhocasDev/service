@@ -6,6 +6,6 @@ import serviceRouter from "./serviceRouter.js"
 const router = express.Router()
 router.use("/user",useRouter)
 router.use("/category",categoryRouter)
-router.use("/getAllCategory",categoryRouter)
+
 router.use("/service", serviceRouter)
 export default router
