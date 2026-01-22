@@ -6,5 +6,5 @@ router.post("/create",categoryController.createCategory)
 router.get("/getAllCategory",categoryController.getAllCategory)
 router.get("/findOneCategory/:id",categoryController.findOnecategory)
 router.delete("/deleteOnecategory/:id",categoryController.deleteOnecategory)
-router.put("/UpdateAllcategory/:id",categoryController.UpdateAllcategory)
+router.put("/Update/:id",categoryController.UpdateAllcategory)
 export default router

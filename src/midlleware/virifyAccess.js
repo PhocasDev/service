@@ -8,7 +8,7 @@ export function verifyAccess(passRole) {
         } else {
             try {
                 const verifyToken = jwt.verify(token, process.env.SCRET_KEY, { expiresIn: '2d' })
-                res.user = verifyToken.user
+                req.user = verifyToken.user
                 if (passRole != verifyToken.user.role) {
                     return res.status(401).json({ message: "Please you dont have access" })
                 }else{

@@ -5,7 +5,7 @@ import { verifyAccess } from "../midlleware/virifyAccess.js"
 const router = express.Router()
 router.post("/",EmailExist,Controller.signUp)
 router.post("/login",Controller.login)
-router.get("/users",verifyAccess("client"),Controller.getAlluser)
+router.get("/users",verifyAccess("provider"),Controller.getAlluser)
 router.get("/",Controller.getId)
 router.get("/",Controller.getoneUse)
 router.patch("/",Controller.updateUser)

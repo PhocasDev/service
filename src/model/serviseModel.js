@@ -10,7 +10,7 @@ const serviceSchema = new mongoose.Schema({
         type:String,
         required:[true,'Enter discription']
     },
-    Categorys:{
+    categorys:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Category"
     },
@@ -34,7 +34,7 @@ serviceSchema.pre(/^find/,function(next){
     }).populate({
         path:"provider",select:"names email"
     })
-    next()
+    
 })
-const service = mongoose.model("service",serviceSchema)
-export default service
+const Service = mongoose.model("Service",serviceSchema)
+export default Service

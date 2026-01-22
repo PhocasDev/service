@@ -17,7 +17,7 @@ class categoryController {
             return res.status(200).json({message:"Get all category",Allcategory})
         }
     }
-    // start here
+
     static findOnecategory = async(req,res)=>{
         try {
             const id = req.params.id
@@ -45,11 +45,11 @@ class categoryController {
     }
     static UpdateAllcategory = async(req,res)=>{
         const id = req.params.id
-        const Allcategory = await UpdateAllcategory.findByIdandUpdate(id)
+        const Allcategory = await Category.findByIdAndUpdate(id,req.body, {new:true})
         if(!Allcategory){
             return res.status(404).json({message:"No category updated"})
         }else{
-            return res.status(201).json({message:"Category is updated successfuly",UpdateAllcategory})
+            return res.status(201).json({message:"Category is updated successfuly",Allcategory})
         }
     }
 }
